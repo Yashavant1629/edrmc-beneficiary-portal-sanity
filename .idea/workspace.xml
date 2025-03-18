@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86cf586-7933-41ae-b8d9-18a0ede7ec3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configfiles/locators.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configfiles/locators.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +35,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "onboarding.tips.debug.path": "E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/src/main/java/org/example/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Social Registry Sanity UI Automation\edrmc-portal-forms-automated\testrunner" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPage.resetPassword">
+  <component name="RunManager" selected="TestNG.LoginPage.login">
     <configuration name="BaseLogin.login" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="edrmc-portal-sanity" />
       <extension name="coverage">
@@ -109,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginPage.resetPassword" />
         <item itemvalue="TestNG.LoginPage.login" />
+        <item itemvalue="TestNG.LoginPage.resetPassword" />
         <item itemvalue="TestNG.BaseLogin.login" />
       </list>
     </recent_temporary>

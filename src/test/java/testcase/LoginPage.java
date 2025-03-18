@@ -49,10 +49,21 @@ public void resetPassword(String email) throws InterruptedException {
 
     @Test(dataProvider = "testDataProvider", dataProviderClass = TestDataProvider.class)
     public void login(String email, String password) throws InterruptedException {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             Commons.enter(driver, By.name(locators.getProperty("username_field")), email);
             Commons.enter(driver, By.name(locators.getProperty("password_field")), password);
             Commons.click(driver, By.xpath(locators.getProperty("login_button")));
 
+            if(isElementPresent(By.xpath(locators.getProperty("dashboard")))) {
+                WebElement dashElement  = driver.findElement(By.xpath(locators.getProperty("dashboard")));
+                Assert.assertNotNull(dashElement,"Login Successfull");
+                Commons.click(driver,By.xpath(locators.getProperty("Menu_button")));
+                Commons.click(driver,By.xpath(locators.getProperty("logout_button")));
+            }else{
+                WebElement errorElement = driver.findElement(By.xpath(locators.getProperty("invalid_message")));
+                String errorMSg = errorElement.getText();
+                Assert.assertEquals(errorMSg,"Invalid Credentials");
+            }
 
     }
 
