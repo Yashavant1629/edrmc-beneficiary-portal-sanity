@@ -29,7 +29,7 @@ public class Commons {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Element identified by " + by.toString() + " was not clickable after 20 seconds");
+            System.out.println("Element identified by " + by.toString() + " was not clickable after 10 seconds");
         } catch (Exception e) {
 
             JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -55,7 +55,7 @@ public class Commons {
             driver.findElement(by).sendKeys(value);
         } catch (TimeoutException toe) {
             driver.findElement(by).sendKeys(value);
-            System.out.println("Element identified by " + by.toString() + " was not clickable after 20 seconds");
+            System.out.println("Element identified by " + by.toString() + " was not clickable after 10 seconds");
         }
         return null;
     }

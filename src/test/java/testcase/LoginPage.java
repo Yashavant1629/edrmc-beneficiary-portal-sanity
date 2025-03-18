@@ -28,11 +28,11 @@ public void resetPassword(String email) throws InterruptedException {
         ));
         String messageText = message.getText();
         System.out.println("Captured message: " + messageText);
-        if (messageText.contains("Password reset instructions sent to your email")) {
-            Assert.assertEquals(messageText, "Password reset instructions sent to your email");
+        if (messageText.contains(locators.getProperty("reset_message"))) {
+            Assert.assertEquals(messageText, locators.getProperty("reset_message"));
             Commons.click(driver, By.xpath(locators.getProperty("back_to_login")));
-        } else if (messageText.contains("No account found for this login")) {
-            Assert.assertEquals(messageText, "No account found for this login");
+        } else if (messageText.contains(locators.getProperty("non_registered_mail_message"))) {
+            Assert.assertEquals(messageText, locators.getProperty("non_registered_mail_message"));
         } else {
             Assert.fail("Unexpected message displayed: " + messageText);
         }
@@ -62,7 +62,7 @@ public void resetPassword(String email) throws InterruptedException {
             }else{
                 WebElement errorElement = driver.findElement(By.xpath(locators.getProperty("invalid_message")));
                 String errorMSg = errorElement.getText();
-                Assert.assertEquals(errorMSg,"Invalid Credentials");
+                Assert.assertEquals(errorMSg,locators.getProperty("invalid_message_text"));
             }
 
     }
