@@ -79,7 +79,6 @@ public class DriverCreator {
 
     @AfterMethod
     public void tearDown() {
-
         driver.close();
     }
 

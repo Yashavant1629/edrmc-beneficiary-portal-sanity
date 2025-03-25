@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86cf586-7933-41ae-b8d9-18a0ede7ec3b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/configfiles/locators.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configfiles/locators.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/DriverCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/DriverCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testcase/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentFormSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentFormSubmit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/Commons.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "onboarding.tips.debug.path": "E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/src/main/java/org/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Social Registry Sanity UI Automation\edrmc-portal-forms-automated\testrunner" />

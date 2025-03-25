@@ -5,20 +5,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Commons;
 import utilities.TestDataProvider;
 
 import java.time.Duration;
+import java.util.logging.Logger;
+
 
 public class LoginPage extends DriverCreator {
+    private static final Logger logger = (Logger) LoggerFactory.getLogger(LoginPage.class);
 
 
 @Test(dataProvider = "testDataProvider", dataProviderClass = TestDataProvider.class)
 public void resetPassword(String email) throws InterruptedException {
+    logger.info("resetPassword testcase intiated");
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     Commons.click(driver, By.xpath(locators.getProperty("reset_link")));
+    logger.info("Clicked on Reset link");
     Commons.enter(driver, By.id(locators.getProperty("reset_email_field")), email);
     Commons.click(driver, By.xpath(locators.getProperty("reset_password_button")));
 
