@@ -2,6 +2,7 @@ package utilities;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -119,7 +120,7 @@ public class Commons {
 
             String att= driver.findElement(by).getAttribute("aria-owns");
             String[] list=att.split(" ");
-            click( driver,By.id(list[0]));
+            click( driver,By.id(list[1]));
             try {
                 sleep(500);
             } catch (InterruptedException e) {
@@ -175,5 +176,27 @@ public class Commons {
         }
         System.out.println("Entry '" + entryName + "' not found in the table.");
         return table;
+    }
+
+    public static void selectDropdownByIndex(WebDriver driver, By dropdownLocator, int index) {
+        try {
+            WebElement dropdownElement = driver.findElement(dropdownLocator);
+            Select select = new Select(dropdownElement);
+            select.selectByIndex(index);
+
+            System.out.println("Dropdown selected at index: " + index);
+        } catch (Exception e) {
+            System.out.println("Failed to select dropdown option by index: " + e.getMessage());
+        }
+    }
+
+    public static void selectByIndex(WebElement dropdownElement, int index) {
+        try {
+            Select select = new Select(dropdownElement);
+            select.selectByIndex(index);
+            System.out.println("Selected option at index: " + index);
+        } catch (Exception e) {
+            System.err.println("Failed to select option at index " + index + ": " + e.getMessage());
+        }
     }
 }
