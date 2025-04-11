@@ -4,9 +4,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static java.lang.Thread.sleep;
 
@@ -199,4 +202,47 @@ public class Commons {
             System.err.println("Failed to select option at index " + index + ": " + e.getMessage());
         }
     }
+
+    public static void assertTableRowContainsValues(WebDriver driver, String tableId, Map<String, String> expectedData) {
+        List<WebElement> headers = driver.findElements(By.xpath("//table[@id='" + tableId + "']//thead//th"));
+        Map<String, Integer> columnIndexMap = new HashMap<>();
+
+        for (int i = 0; i < headers.size(); i++) {
+            columnIndexMap.put(headers.get(i).getText().trim(), i + 1); // XPath is 1-based
+        }
+
+        List<WebElement> rows = driver.findElements(By.xpath("//table[@id='" + tableId + "']//tbody/tr"));
+
+        boolean matchFound = false;
+
+        for (WebElement row : rows) {
+            boolean rowMatches = true;
+
+            for (Map.Entry<String, String> entry : expectedData.entrySet()) {
+                String columnName = entry.getKey();
+                String expectedValue = entry.getValue();
+
+                Integer colIndex = columnIndexMap.get(columnName);
+                if (colIndex == null) {
+                    throw new RuntimeException("Column '" + columnName + "' not found in table '" + tableId + "'");
+                }
+
+                WebElement cell = row.findElement(By.xpath("./td[" + colIndex + "]"));
+                String actualValue = cell.getText().trim();
+
+                if (!actualValue.equals(expectedValue)) {
+                    rowMatches = false;
+                    break;
+                }
+            }
+
+            if (rowMatches) {
+                matchFound = true;
+                break;
+            }
+        }
+
+        Assert.assertTrue(matchFound, "No matching row found in table '" + tableId + "' for values: " + expectedData);
+    }
+
 }
