@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/testrunner"><classes/></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/testrunner">
+
+        <classes>
+            <class name="testcase.LoginPage"/>
+            <class name="testcase.PermanentResidentScenario1"/>
+            <class name="testcase.PermanentResidentScenario2"/>
+            <class name="testcase.PermanentResidentScenario3"/>
+            <class name="testcase.PermanentResidentScenario4"/>
+            <class name="testcase.PermanentResidentScenario5"/>
+        </classes>
+    </test>
+</suite>
