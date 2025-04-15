@@ -1,10 +1,12 @@
 package testcase;
 
 import base.BaseLogin;
+import listener.TestListeners;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.Commons;
 
@@ -12,6 +14,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Listeners(TestListeners.class)
+@Test
 public class PermanentResidentScenario2 extends BaseLogin {
 
     @Test

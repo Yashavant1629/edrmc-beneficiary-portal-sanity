@@ -204,45 +204,63 @@ public class Commons {
     }
 
     public static void assertTableRowContainsValues(WebDriver driver, String tableId, Map<String, String> expectedData) {
-        List<WebElement> headers = driver.findElements(By.xpath("//table[@id='" + tableId + "']//thead//th"));
-        Map<String, Integer> columnIndexMap = new HashMap<>();
-
-        for (int i = 0; i < headers.size(); i++) {
-            columnIndexMap.put(headers.get(i).getText().trim(), i + 1); // XPath is 1-based
-        }
-
-        List<WebElement> rows = driver.findElements(By.xpath("//table[@id='" + tableId + "']//tbody/tr"));
-
         boolean matchFound = false;
 
-        for (WebElement row : rows) {
-            boolean rowMatches = true;
+        while (true) {
 
-            for (Map.Entry<String, String> entry : expectedData.entrySet()) {
-                String columnName = entry.getKey();
-                String expectedValue = entry.getValue();
+            Map<String, Integer> columnIndexMap = new HashMap<>();
+            List<WebElement> headers = driver.findElements(By.xpath("//table[@id='" + tableId + "']//thead//th"));
+            for (int i = 0; i < headers.size(); i++) {
+                columnIndexMap.put(headers.get(i).getText().trim(), i + 1); // 1-based index
+            }
 
-                Integer colIndex = columnIndexMap.get(columnName);
-                if (colIndex == null) {
-                    throw new RuntimeException("Column '" + columnName + "' not found in table '" + tableId + "'");
-                }
 
-                WebElement cell = row.findElement(By.xpath("./td[" + colIndex + "]"));
-                String actualValue = cell.getText().trim();
-
-                if (!actualValue.equals(expectedValue)) {
-                    rowMatches = false;
+            List<WebElement> rows = driver.findElements(By.xpath("//table[@id='" + tableId + "']//tbody/tr"));
+            for (WebElement row : rows) {
+                if (isRowMatching(row, expectedData, columnIndexMap)) {
+                    matchFound = true;
                     break;
                 }
             }
 
-            if (rowMatches) {
-                matchFound = true;
-                break;
-            }
+            if (matchFound) break;
+            if (!goToNextPage(driver)) break;
         }
 
         Assert.assertTrue(matchFound, "No matching row found in table '" + tableId + "' for values: " + expectedData);
     }
+
+
+    private static boolean isRowMatching(WebElement row, Map<String, String> expectedData, Map<String, Integer> columnIndexMap) {
+        for (Map.Entry<String, String> entry : expectedData.entrySet()) {
+            Integer colIndex = columnIndexMap.get(entry.getKey());
+            if (colIndex == null) {
+                throw new RuntimeException("Column '" + entry.getKey() + "' not found in table");
+            }
+
+            String actualValue = row.findElement(By.xpath("./td[" + colIndex + "]")).getText().trim();
+            if (!actualValue.equals(entry.getValue())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    private static boolean goToNextPage(WebDriver driver) {
+        try {
+            WebElement nextBtn = driver.findElement(By.cssSelector("#page-buttons .next-button"));
+            if (nextBtn.isDisplayed() && nextBtn.isEnabled()) {
+                nextBtn.click();
+                Thread.sleep(1000);
+                return true;
+            }
+        } catch (NoSuchElementException | InterruptedException e) {
+
+        }
+        return false;
+    }
+
+
 
 }

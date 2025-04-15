@@ -1,6 +1,7 @@
 package testcase;
 
 import base.DriverCreator;
+import listener.TestListeners;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.Commons;
 import utilities.TestDataProvider;
@@ -15,7 +17,8 @@ import utilities.TestDataProvider;
 import java.time.Duration;
 import org.apache.logging.log4j.Logger;
 
-
+@Listeners(TestListeners.class)
+@Test
 public class LoginPage extends DriverCreator {
     private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
