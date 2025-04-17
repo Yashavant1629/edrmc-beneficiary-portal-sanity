@@ -41,8 +41,6 @@ public class TestListeners implements ITestListener {
     private void captureAndAttachScreenshot(String testName, WebDriver driver) {
         if (driver instanceof TakesScreenshot screenshotDriver) {
             byte[] screenshot = screenshotDriver.getScreenshotAs(OutputType.BYTES);
-
-            // Attach the screenshot as an image to Allure
             Allure.addAttachment(testName + " Screenshot", new ByteArrayInputStream(screenshot));
         }
     }
