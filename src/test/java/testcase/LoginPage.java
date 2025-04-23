@@ -16,6 +16,7 @@ import utilities.TestDataProvider;
 
 import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import utilities.TestLogger;
 
 @Listeners(TestListeners.class)
 @Test
@@ -25,10 +26,10 @@ public class LoginPage extends DriverCreator {
 
 @Test(dataProvider = "testDataProvider", dataProviderClass = TestDataProvider.class)
 public void resetPassword(String email) throws InterruptedException {
-    logger.info("resetPassword testcase intiated");
+    TestLogger.info("resetPassword testcase intiated");
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     Commons.click(driver, By.xpath(locators.getProperty("reset_link")));
-    logger.info("Clicked on Reset link");
+    TestLogger.info("Clicked on Reset link");
     Commons.enter(driver, By.id(locators.getProperty("reset_email_field")), email);
     Commons.click(driver, By.xpath(locators.getProperty("reset_password_button")));
 

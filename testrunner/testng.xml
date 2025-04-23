@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="listener.TestListeners" />
     </listeners>
-    <test verbose="2" preserve-order="true" name="E:/Social Registry Sanity UI Automation/edrmc-portal-forms-automated/testrunner">
+    <test verbose="2" preserve-order="true" name="EDRMC Portal UI Automation">
         <classes>
             <class name="testcase.LoginPage"/>
             <class name="testcase.PermanentResidentScenario1"/>

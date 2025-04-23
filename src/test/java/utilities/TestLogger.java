@@ -22,7 +22,6 @@ public class TestLogger {
         logger.debug(message);
     }
 
-    // Add more log methods as needed
     public static void shutdown() {
         LogManager.shutdown();
     }
