@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.Commons;
+import utilities.ReadXLSData;
 import utilities.TestDataProvider;
 
 import java.time.Duration;
@@ -24,7 +25,7 @@ public class LoginPage extends DriverCreator {
     private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
 
-@Test(dataProvider = "testDataProvider", dataProviderClass = TestDataProvider.class)
+@Test(dataProviderClass = ReadXLSData.class,dataProvider = "openg2pdata")
 public void resetPassword(String email) throws InterruptedException {
     TestLogger.info("resetPassword testcase intiated");
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

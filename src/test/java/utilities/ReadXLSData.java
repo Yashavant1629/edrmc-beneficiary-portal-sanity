@@ -15,7 +15,7 @@ public class ReadXLSData {
     @DataProvider(name="openg2pdata")
     public String[][] getData(Method m) throws IOException {
         String excelSheetName = m.getName();
-        FileInputStream propertyFileInput = new FileInputStream("testconfig/configfile/config.properties");
+        FileInputStream propertyFileInput = new FileInputStream("testconfigs/configfile/config.properties");
         properties.load(propertyFileInput);
         propertyFileInput.close();
 

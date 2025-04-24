@@ -96,6 +96,8 @@ public class PermanentResidentScenario2 extends BaseLogin {
         Commons.enter(driver,By.id(locators.getProperty("member_phone_number")),"+251912344321");
         Commons.enter(driver,By.xpath(locators.getProperty("member_address")),"Bangalore");
         Commons.click(driver,By.id(locators.getProperty("Add")));
+
+
         Commons.click(driver,By.id(locators.getProperty("household_data")));
         WebElement reliefProgram = driver.findElement(By.id(locators.getProperty("relief_program")));
         Commons.selectByIndex(reliefProgram,1);
