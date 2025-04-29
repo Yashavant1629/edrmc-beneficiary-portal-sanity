@@ -7,7 +7,6 @@
     <list default="true" id="e86cf586-7933-41ae-b8d9-18a0ede7ec3b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testconfigs/testdata/testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testconfigs/testdata/testdata.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

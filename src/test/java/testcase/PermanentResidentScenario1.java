@@ -80,8 +80,10 @@ public class PermanentResidentScenario1 extends BaseLogin {
     private void selectAdministrativeLocation() throws InterruptedException {
         WebElement region = driver.findElement(By.id(locators.getProperty("region")));
         Commons.selectByIndex(region, 1);
+        wait(2);
         waitForElement(By.id(locators.getProperty("zone")));
         Commons.selectByIndex(driver.findElement(By.id(locators.getProperty("zone"))), 1);
+        wait(2);
         waitForElement(By.id(locators.getProperty("woreda")));
         Commons.selectByIndex(driver.findElement(By.id(locators.getProperty("woreda"))), 1);
         Commons.enter(driver, By.id(locators.getProperty("kebele")), "kebele");
@@ -129,11 +131,16 @@ public class PermanentResidentScenario1 extends BaseLogin {
         Commons.enter(driver, By.id(locators.getProperty("children_under_5years")), childrenUnder5);
         Commons.enter(driver, By.id(locators.getProperty("malnourished_children")), malnourishedChildren);
         Commons.enter(driver, By.id(locators.getProperty("chronically_ill")), chronicallyIll);
-        if (disability.equalsIgnoreCase("yes")) {
-            Commons.click(driver, By.name(locators.getProperty("disability")));
-        }
+//        if (disability.equalsIgnoreCase("yes")) {
+//            Commons.click(driver, By.name(locators.getProperty("disability")));
+//        }
+        Commons.click(driver,By.name(locators.getProperty("disability")));
         Commons.enter(driver, By.id(locators.getProperty("number_of_disables")), numberOfDisables);
+        Commons.click(driver,By.id(locators.getProperty("head_above_60")));
+        Commons.click(driver,By.id(locators.getProperty("female_headed")));
+        Commons.click(driver,By.id(locators.getProperty("child_headed")));
         Commons.enter(driver, By.id(locators.getProperty("transport_cost")), transportCost);
+        Commons.click(driver,By.id(locators.getProperty("saving_experience")));
         Commons.enter(driver, By.id(locators.getProperty("non_formal_education")), nonFormalEducation);
         Commons.enter(driver, By.id(locators.getProperty("formal_education")), formalEducation);
 
@@ -181,7 +188,7 @@ public class PermanentResidentScenario1 extends BaseLogin {
         WebElement trade = driver.findElement(By.id(locators.getProperty("trade")));
         Commons.selectByIndex(trade, 1);
         Commons.click(driver, By.id(locators.getProperty("submit_button")));
-        wait(2);
+
     }
 
 
