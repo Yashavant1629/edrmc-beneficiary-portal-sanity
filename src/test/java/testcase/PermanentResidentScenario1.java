@@ -156,7 +156,7 @@ public class PermanentResidentScenario1 extends BaseLogin {
         Commons.enter(driver, By.id(locators.getProperty("farmland_size")), farmlandSize);
         Commons.enter(driver, By.id(locators.getProperty("rented_farmland")), rentedFarmland);
         Commons.enter(driver, By.id(locators.getProperty("mining_activities")), miningActivities);
-
+        Commons.click(driver, By.id(locators.getProperty("natural_resource")));
         Commons.enter(driver, By.id(locators.getProperty("no_of_cattle")), noOfCattle);
         Commons.enter(driver, By.id(locators.getProperty("no_of_ox")), noOfOx);
         Commons.enter(driver, By.id(locators.getProperty("no_of_cows")), noOfCows);
@@ -181,6 +181,7 @@ public class PermanentResidentScenario1 extends BaseLogin {
         WebElement trade = driver.findElement(By.id(locators.getProperty("trade")));
         Commons.selectByIndex(trade, 1);
         Commons.click(driver, By.id(locators.getProperty("submit_button")));
+        wait(2);
     }
 
 
