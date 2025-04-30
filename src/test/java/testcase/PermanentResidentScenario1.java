@@ -175,13 +175,11 @@ public class PermanentResidentScenario1 extends BaseLogin {
         Commons.enter(driver, By.id(locators.getProperty("no_of_mule")), noOfMule);
         Commons.enter(driver, By.id(locators.getProperty("no_of_beehives")), noOfBeehives);
         Commons.enter(driver, By.id(locators.getProperty("no_of_chickens")), noOfChickens);
-
         Commons.click(driver, By.id(locators.getProperty("own_motorbike_three_leg")));
         Commons.click(driver, By.id(locators.getProperty("own_motorbike_two_leg")));
         Commons.click(driver, By.id(locators.getProperty("construction_tools")));
         Commons.click(driver, By.xpath(locators.getProperty("living_in_abroad")));
         Commons.click(driver, By.xpath(locators.getProperty("living_in_urban_city")));
-
         WebElement activities = driver.findElement(By.id(locators.getProperty("manufacturing_activities")));
         Commons.selectByIndex(activities, 1);
         Commons.click(driver, By.xpath(locators.getProperty("micro_finance")));
