@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e86cf586-7933-41ae-b8d9-18a0ede7ec3b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcase/PermanentResidentScenario4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testconfigs/testdata/testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testconfigs/testdata/testdata.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,25 +53,7 @@
       <recent name="E:\Social Registry Sanity UI Automation\edrmc-portal-forms-automated\testrunner" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PermanentResidentScenario2.scenarioPR2">
-    <configuration name="LoginPage.resetPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="edrmc-portal-sanity" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcase" />
-      <option name="MAIN_CLASS_NAME" value="testcase.LoginPage" />
-      <option name="METHOD_NAME" value="resetPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.PermanentResidentScenario4.scenarioPR4">
     <configuration name="PermanentResidentScenario1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="edrmc-portal-sanity" />
       <extension name="coverage">
@@ -107,23 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PermanentResidentScenario2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="edrmc-portal-sanity" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testcase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testcase" />
-      <option name="MAIN_CLASS_NAME" value="testcase.PermanentResidentScenario2" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PermanentResidentScenario2.scenarioPR2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="edrmc-portal-sanity" />
       <extension name="coverage">
@@ -142,13 +107,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PermanentResidentScenario3.scenarioPR3" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="edrmc-portal-sanity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcase" />
+      <option name="MAIN_CLASS_NAME" value="testcase.PermanentResidentScenario3" />
+      <option name="METHOD_NAME" value="scenarioPR3" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PermanentResidentScenario4.scenarioPR4" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="edrmc-portal-sanity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcase" />
+      <option name="MAIN_CLASS_NAME" value="testcase.PermanentResidentScenario4" />
+      <option name="METHOD_NAME" value="scenarioPR4" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PermanentResidentScenario4.scenarioPR4" />
+        <item itemvalue="TestNG.PermanentResidentScenario3.scenarioPR3" />
         <item itemvalue="TestNG.PermanentResidentScenario2.scenarioPR2" />
         <item itemvalue="TestNG.PermanentResidentScenario1.scenarioPR1" />
         <item itemvalue="TestNG.PermanentResidentScenario1" />
-        <item itemvalue="TestNG.PermanentResidentScenario2" />
-        <item itemvalue="TestNG.LoginPage.resetPassword" />
       </list>
     </recent_temporary>
   </component>
